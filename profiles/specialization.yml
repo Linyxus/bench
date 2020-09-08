@@ -1,0 +1,24 @@
+charts:
+
+    - name: "Tuple reverse (Runtime)"
+      url: https://github.com/lampepfl/dotty/blob/master/bench-run/src/main/scala/dotty/tools/benchmarks/tuples/TupleOps.scala#L59
+      lines:
+        - key: tuple-reverse
+          label: bootstrapped
+
+    - name: "Tuple flatMap (Runtime)"
+      url: https://github.com/lampepfl/dotty/blob/master/bench-run/src/main/scala/dotty/tools/benchmarks/tuples/TupleOps.scala#L64
+      lines:
+        - key: tuple-flatMap
+          label: bootstrapped
+
+scripts:
+
+    tuple-reverse:
+        - measure-run TupleOps.reverse
+
+    tuple-flatMap:
+        - measure-run TupleOps.flatMap
+
+config:
+    pr_base_url: "https://github.com/lampepfl/dotty/pull/"
